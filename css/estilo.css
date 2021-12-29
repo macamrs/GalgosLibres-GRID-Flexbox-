@@ -2,49 +2,185 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
     --color-principal: #f7a2abd2;
     --color-secundario: #4a536b;
+    --violeta: #d9d4e7;
     --blanco: #fff;
     --negro: #000;
+    --títulos:'Montserrat', sans-serif; 
+    --párrafos:'Open Sans', sans-serif;
 }
 
-/* HEADER */
+h1 , h2 , h3 , h4 { font-family: var(--títulos);}
+p , a , input , textarea , label , .desplegable { font-family: var(--párrafos);}
+
+/* -- HEADER -- */
 .encabezado {
     grid-area: nav;
     background: var(--color-principal);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    backdrop-filter: blur(6.5px);
+    flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
-.nav_item {
-    text-decoration: none;
-    list-style: none;
+    /* Logo Nav */
+.logo {
+    transition: transform 250ms;
 }
+
+.logo:hover {
+    transform: scale(1.1);
+    transition: all ease 500ms;
+}
+
+    /* Items nav */
+.nav_lista {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav_item a {
+    text-decoration: none;
+    list-style-type: none;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0 1em 0 2em;
+    color: var(--negro);
+    text-transform: uppercase;
+}
+
+.nav_item a:hover {
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+/* -- PAGINA COLABORAR -- */
+.grid-colaborar {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: .5fr 1fr 1fr 1fr 1fr .5fr;
+    grid-template-rows: .5fr .5fr auto .5fr auto 1fr;
+    grid-template-areas: 
+    "nav nav nav nav nav nav"
+    "titulo4 titulo4 titulo4 titulo4 titulo4 titulo4"
+    "card card card card card card"
+    "main2 main2 main2 main2 main2 main2"
+    "sub4 sub4 sub4 sub4 sub4 sub4"
+    "footer footer footer footer footer footer";
+}
+
+    /* Titulo */
+.titulo-colaborar {
+    grid-area: titulo4;
+    grid-column: 2 / 6;
+}
+
+.titulo-colaborar h1 {
+    letter-spacing: .5px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 10px 0 10px;    
+}
+
+    /* Card con imágenes */
+.container-cards {
+    grid-area: card;
+    grid-column: 2 / 6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 2em 0 2em 0;
+}
+
+.container-cards img {
+    max-width: 20rem;
+    height: 80%;
+    border-radius: 91% 16% 84% 9% / 25% 75% 12% 88%;
+    padding-bottom: 10px;
+}
+
+    /* Titulo agrupaciones */
+
+.titulo-agrupaciones {
+    grid-area: main2;
+    grid-column: 2 / 6;
+}
+
+.titulo-agrupaciones h1 {
+    letter-spacing: .5px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 10px 0 10px;     
+}
+
+    /* Sección agrupaciones */
+
+.agrupaciones {
+    grid-area: sub4;
+    grid-column: 2 / 6;
+    padding: 2em 0 2em 0;
+}    
+
+.sección-agrupaciones img {
+    max-width: 22rem;
+    height: 80%;
+    border-radius: 23% 43% 20% 18% / 46% 33% 35% 19%;
+}    
 
 /* -- PAGINA DE CONTACTO -- */
 .grid-contacto {
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
-    grid-template-rows: 0.5fr 1fr 2fr 1fr;
+    grid-template-columns: .5fr 2fr 2fr .5fr;
+    grid-template-rows: .5fr .5fr 2fr .2fr 1fr;
     grid-template-areas: 
     "nav nav nav nav"
     "titulo5 titulo5 titulo5 titulo5"
     "form form mapa mapa"
+    "parrafo5 parrafo5 parrafo5 parrafo5"
     "footer footer footer footer";
+}
+
+    /* Titulo */
+.contenedor_titulo {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .titulo-contact {
     grid-area: titulo5;
+    grid-column: 2 / 4;
+}
+
+.titulo-contact h1 {
+    letter-spacing: .5px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 10px 0 10px;
 }
 
     /* Formulario contacto */
 .container-contacto {
     grid-area: form;
+    grid-column: 2 / 3;
     width: 80%;
-    margin: 2rem auto 2rem auto;
+    margin: 1rem auto 1rem auto;
 }
 
 .formulario_contacto {
@@ -56,25 +192,33 @@
 .form_grupo {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 80%;
+    text-align: center;
+    width: 100%;
 }
 
 .form_partes {
     border-radius: 5px;
+    font-weight: 500;
+    font-size: 18px;
     line-height: 22px;
     border: 2px solid #3a3e53;
     transition: all .3s;
+    padding: 9px;
+    width: 100%;
+    box-sizing: border-box;
     outline: 0;
 }
 
-.form_partes:focus { border: 2px solid #3a3e53;}
 
-.form_partes .desplegable {
+.desplegable {
     border: 2px solid #3a3e53;
+    margin-top: 7px;
 } 
 
-label { font-size: 20px;}
+label { 
+    font-size: 20px;
+    font-weight: bolder;
+}
 
 textarea {
     width: 100%;
@@ -91,18 +235,181 @@ input {
 }
 
 input[type=submit] {
-    margin: 14px auto;
+    margin: 9px auto;
     cursor: pointer;
+    font-family: var(--párrafos);
+    width: 100%;
+    border-radius: 5px;
+    background: var(--color-principal);
+    border: 0;
+    color: white;
+    font-size: 23px;
+    padding: 10px 0 10px 0;
+    transition: all .3s;
 }
+
+input[type=submit]:hover { background: #cc4949;}
+
     /* Mapa */
 .mapa {
     grid-area: mapa;
+    grid-column: 3 / 4;
 }
 
 .mapa iframe {
     align-items: center;
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 95%;
 }
 
+    /* Parrafo final */
+
+.parrafo-contacto {
+    grid-area: parrafo5;
+    grid-column: 2 / 4;
+    justify-self: center;
+    padding: 2em 0 2em 0;
+    text-align: center;
+}    
+
 /* FOOTER */
+footer {
+    grid-area: footer;
+    background: var(--color-secundario);
+    padding-top: 15px;
+    border-radius: 25% 48% 9% 9% / 15% 14% 0% 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    /* Logo */
+.logo-footer {
+    padding: 10px;
+
+}
+
+    /* Barra Nav */
+.nav-footer { padding: 10px;}
+
+.nav-footer a {
+    color: var(--negro);
+    padding: 12px 1em 0 1em;
+    font-weight: bolder;
+}
+
+.nav-footer a:hover {
+    color: var(--blanco);
+    transform: translateY(-4px);
+}
+
+    /* Redes Sociales */
+.redes-footer {
+    padding: 10px;
+}
+
+.fab {
+    font-size: 37px;
+    padding: 0 15px 0 15px;
+}
+
+.area_circulo .icon {
+    color: var(--negro);
+    transition: .5s;
+}
+
+.fa-instagram:hover {
+    color: #d22987;
+    transition: .2s;
+}
+
+.fa-facebook:hover {
+    color: #3b5999;
+    transition: .2s;
+}
+    /* Copyright */
+.copyright {
+    padding: 10px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+    /* PAGINA CONTACTO */
+    .grid-contacto {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: 
+        "nav"
+        "titulo5"
+        "form" 
+        "mapa"
+        "parrafo5"
+        "footer";
+    }
+    
+    .titulo-contact {
+        grid-area: titulo5;
+    }
+    .container-contacto {
+        grid-area: form;
+    }
+    .parrafo-contacto {
+        grid-area: parrafo5;
+        text-align: center;
+    }
+    .mapa {
+        grid-area: mapa;
+        text-align: center;
+    }
+
+    /* -- PAGINA COLABORAR -- */
+    .grid-colaborar {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: .5fr .5fr auto .5fr auto 1fr;
+        grid-template-areas: 
+        "nav"
+        "titulo4"
+        "card"
+        "main2"
+        "sub4"
+        "footer";
+    }
+
+        /* Titulo */
+    .titulo-colaborar {
+        grid-area: titulo4;
+    }
+
+        /* Card con imágenes */
+    .container-cards {
+        grid-area: card;
+    }
+
+    .container-cards img { max-width: 18rem;}
+
+        /* Titulo agrupaciones */
+    .titulo-agrupaciones {
+        grid-area: main2;
+    }
+
+        /* Sección agrupaciones */
+
+    .agrupaciones {
+        grid-area: sub4;
+    }    
+
+    .sección-agrupaciones img {
+        max-width: 20rem;
+        height: 70%;
+    }    
+
+}
