@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <meta charset="UTF-8">
-    <!-- Keywords y Description -->
-    <meta name="keywords" content="galgos, galgos en rosario, galgos rescatados, galgos en tránsito, galgos libres rosario, galgos en adopcion, galgos argentina, ONG galgos libres rosario">
-    <meta name="description" content="Somos una agrupacion que rescata galgos del maltrato y el abandono y les buscan un hogar de transito hasta dar con uno definitivo.">
+    <!-- KEYWORDS -->
+    <meta name="keywords" content="galgos, galgos en rosario, galgos rescatados, galgos en tránsito, galgos libres rosario, galgos en adopción, galgos argentina, ONG galgos libres rosario">
+    <!-- DESCRIPTION -->
+    <meta name="description" content="Somos una agrupación que rescata galgos del maltrato y el abandono y les buscan un hogar de transito hasta dar con uno definitivo.">
+    <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/7d51851eb9.js" crossorigin="anonymous"></script>
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilo.css">
     <title>Galgos Libres Rosario</title>
 </head>
 <body>
   <!-- logo + navbar -->
-     <header class="container-fluid header-1 sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-light navbar-togglable">      
-          <div class="container">
-            <a class="navbar-brand logo " href="index.html"><img src="imagenes/logo.png" alt="#" width="100px" height="100px"></a>
+  <header class="container-fluid header-1 sticky-top">
+      <div class="container">      
+        <nav class="navbar navbar-expand-lg navbar-light">      
+            <a class="navbar-brand logo " href="index.html"><img src="imagenes/logo.png" alt="logo galgos libres" width="100px" height="100px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -32,16 +37,17 @@
               </div>
            </div>
           </div>
-        </nav>           
+        </nav> 
+       </div>            
   </header>
 
-    <!-- imagen cover + botones -->
+    <!-- Imagen cover + botones -->
     <div class="jumbotron jumbotron-fluid">
       <div class=" container texto_cover">
-        <h1 class="display-2 text-white"><strong>Galgos Libres Rosario</strong></h1>
-        <p class="lead text-white h5"><strong>Somos un grupo que rescata galgos que han sido maltratados por una industria cruel y promoviendo su adopcion. </strong></p>
+        <h1 class="display-2"><strong>Galgos Libres Rosario</strong></h1>
+        <p class="lead h5"><strong>Somos un grupo que rescata galgos que han sido maltratados por una industria cruel y promoviendo su adopción. </strong></p>
         <br>
-        <a class="card-text boton-index btn btn-info" href="pages/nosotros.html">Conocenos</a>
+        <a class="card-text boton-index btn btn-info" href="#">Conocenos</a>
         <a class="card-text boton-index btn btn-info" href="pages/colaborar.html">Colaborar</a>
       </div>
     </div>
@@ -55,29 +61,27 @@
           </div>  
           </div>
         </div>
-    </div>    
-    <!-- cards + imagenes -->
+    </div>   
+
+    <!-- Cards + Imágenes -->
     <div class="container-fluid">
-      <div class="row main_deck">
+      <div class="row main_deck" data-aos="fade-up">
         <div class="col-lg-4 card_index">
-            <img class="bd-placeholder-img img-fluid w-100" src="img/olivia2.jpg" alt="#" width="800px" height="600px">
+            <img class="bd-placeholder-img img-fluid w-100" src="imagenes/olivia2.jpg" alt="#" width="800px" height="600px">
             <h4 class="card-title text-uppercase">Adopta un Galgo</h4>
-            <p class="card-text">Cada adopción abre una puerta para otro galgo que necesite ayuda.</p>
         </div>
         <div class="col-lg-4 card_index">
-            <img class="bd-placeholder-img img-fluid w-100" src="img/Kaia.jpg" class="card-img-top" alt="#"width="800px" height="600px">
-            <h4 class="card-title text-uppercase">Hogar de tránsito</h4>
-            <p class="card-text">Cuida transitoriamente a galgos en recuperación o cachorros hasta su adopción definitiva.</p>
+            <img class="bd-placeholder-img img-fluid w-100" src="imagenes/Kaia.jpg" class="card-img-top" alt="#"width="800px" height="600px">
+            <h4 class="card-title text-uppercase">Ser hogar de tránsito</h4>
         </div>
         <div class="col-lg-4 card_index">
-            <img class="bd-placeholder-img img-fluid w-100"  src="img/calendario.jpg" class="card-img-top" alt="#" width="800px" height="600px">                    
+            <img class="bd-placeholder-img img-fluid w-100"  src="imagenes/calendario.jpg" class="card-img-top" alt="#" width="800px" height="600px">                    
             <h4 class="card-title text-uppercase">Donar</h4>
-            <p class="card-text">Podes ayudar económicamente comprando nuestro calendario 2022.</p>
         </div>
       </div>
     </div>  
     
-    <!-- Seccion "Más protectoras" -->
+    <!-- Sección "Más protectoras" -->
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-12">
@@ -88,102 +92,103 @@
         </div>
     </div>
 
-    <div class="container">
-    <div class="container-agrupaciones">
+    <!-- Primera fila logos -->
+  <div class="container">
+    <div class="container-agrupaciones" data-aos="fade-up">
         <div class="row justify-content-center">
           <div class="card-deck justify-content-sm-around fila-logos">
             <div class="col-lg-3">
-              <a href="https://www.instagram.com/propatasrosario/?hl=es">
-              <img class="card-img rounded-circle logo_protectora img-fluid" src="img/logos-protectoras/propatas.png" alt="">
+              <a href="https://www.instagram.com/propatasrosario/?hl=es" target="_blank">
+              <img class="card-img rounded-circle logo_protectora img-fluid" src="imagenes/logos-protectoras/propatas.png" alt="Propatas">
               </a>
             </div>
             <div class="col-lg-3">
-              <a href="https://www.facebook.com/patitassueltassinhogar/">
-              <img class="card-img rounded-circle logo_protectora img-fluid" src="img/logos-protectoras/patitas.png" alt="">
+              <a href="https://www.facebook.com/patitassueltassinhogar/" target="_blank">
+              <img class="card-img rounded-circle logo_protectora img-fluid" src="imagenes/logos-protectoras/patitas.png" alt="Patitas Rosario">
               </a>
             </div>
             <div class="col-lg-3">
-              <a href="https://www.instagram.com/gatitosrosario/?hl=es">
-              <img class="card-img rounded-circle logo_protectora img-fluid" src="img/logos-protectoras/gatitosrosario.png" alt="">
+              <a href="https://www.instagram.com/gatitosrosario/?hl=es" target="_blank">
+              <img class="card-img rounded-circle logo_protectora img-fluid" src="imagenes/logos-protectoras/gatitosrosario.png" alt="Gatitos Rosario">
               </a>
             </div>
             <div class="col-lg-3">
-              <a href="https://www.instagram.com/elmejoramigovgg/">
-              <img class="card-img rounded-circle logo_protectora img-fluid" src="img/logos-protectoras/ema.jpg" alt="Protectora E.M.A VGG">
+              <a href="https://www.instagram.com/elmejoramigovgg/" target="_blank">
+              <img class="card-img rounded-circle logo_protectora img-fluid" src="imagenes/logos-protectoras/ema.jpg" alt="Protectora E.M.A VGG">
               </a>
             </div>
           </div>
         </div>
-
+        <!-- Segunda fila logos -->
           <div class="row justify-content-center">
             <div class="card-deck justify-content-sm-around fila-logos">
-            <div class="col-lg-3">
-              <a href="https://www.instagram.com/mundoaparteoficial/">
-              <img class="card-img rounded-circle logo_protectora img-fluid" src="img/logos-protectoras/mundoparte.jpg" alt="">
-              </a>
-            </div>
-            <div class="col-lg-3">
-              <a href="https://www.instagram.com/animalistasderosario/">
-              <img class="card-img rounded-circle logo_protectora img-fluid" src="img/logos-protectoras/animalistasderosario.png" alt="">
-              </a>
-            </div>
-            <div class="col-lg-3">
-              <a href="https://www.instagram.com/accionbigotes/">
-              <img class="card-img rounded-circle logo_protectora img-fluid" src="img/logos-protectoras/accionbigotes.png" alt="">
-              </a>
-            </div>
-            <div class="col-lg-3">
-              <a href="https://www.instagram.com/protectorarosario/">
-              <img class="card-img rounded-circle logo_protectora img-fluid" src="img/logos-protectoras/protectorarosario.png" alt="">
-              </a>
-            </div>
+              <div class="col-lg-3">
+                <a href="https://www.instagram.com/mundoaparteoficial/" target="_blank">
+                <img class="card-img rounded-circle logo_protectora img-fluid" src="imagenes/logos-protectoras/mundoparte.jpg" alt="Mundo Aparte">
+                </a>
+              </div>
+              <div class="col-lg-3">
+                <a href="https://www.instagram.com/animalistasderosario/" target="_blank">
+                <img class="card-img rounded-circle logo_protectora img-fluid" src="imagenes/logos-protectoras/animalistasderosario.png" alt="Animalistas de Rosario">
+                </a>
+              </div>
+              <div class="col-lg-3">
+                <a href="https://www.instagram.com/accionbigotes/" target="_blank">
+                <img class="card-img rounded-circle logo_protectora img-fluid" src="imagenes/logos-protectoras/accionbigotes.png" alt="Acción Bigotes">
+                </a>
+              </div>
+              <div class="col-lg-3">
+                <a href="https://www.instagram.com/protectorarosario/" target="_blank">
+                <img class="card-img rounded-circle logo_protectora img-fluid" src="imagenes/logos-protectoras/protectorarosario.png" alt="Protectora Rosario">
+                </a>
+              </div>
             </div>
           </div>
-
+          <!-- Tercera fila logos -->
           <div class="row justify-content-center"> 
-            <div class="card-deck justify-content-sm-around fila-logos">
-            <div class="col-lg-3">
-              <a href="https://www.instagram.com/amigosdelosperritosdegraciela/">
-                  <img class="card-img rounded-circle logo_protectora img-fluid" src="img/logos-protectoras/Gracielitos.png" alt="">
-              </a>
+              <div class="card-deck justify-content-sm-around fila-logos">
+                <div class="col-lg-3">
+                  <a href="https://www.instagram.com/amigosdelosperritosdegraciela/" target="_blank">
+                      <img class="card-img rounded-circle logo_protectora img-fluid" src="imagenes/logos-protectoras/Gracielitos.png" alt="Gracielitos">
+                  </a>
+                </div>
+                <div class="col-lg-3">
+                  <a href="https://www.instagram.com/rosarioanimal/" target="_blank">
+                  <img class="card-img rounded-circle logo_protectora img-fluid" src="imagenes/logos-protectoras/rosanimal.png" alt="Rosario animal">
+                  </a>
+                </div>
+                <div class="col-lg-3">
+                  <a href="https://www.instagram.com/imusitasquenosnecesitan/" target="_blank">
+                  <img class="card-img rounded-circle logo_protectora img-fluid" src="imagenes/logos-protectoras/imusitas.jpg" alt="Imusa">
+                  </a>
+                </div>
+              <div class="col-lg-3">
+                <a href="https://www.instagram.com/ayudandoamilpatitasrosario/" target="_blank">
+                <img class="card-img rounded-circle logo_protectora img-fluid" src="imagenes/logos-protectoras/milpatitas.png" alt="Mil Patitas">
+                </a>
+              </div>
             </div>
-            <div class="col-lg-3">
-              <a href="https://www.instagram.com/rosarioanimal/">
-              <img class="card-img rounded-circle logo_protectora img-fluid" src="img/logos-protectoras/rosanimal.png" alt="">
-              </a>
-            </div>
-            <div class="col-lg-3">
-              <a href="https://www.instagram.com/imusitasquenosnecesitan/">
-              <img class="card-img rounded-circle logo_protectora img-fluid" src="img/logos-protectoras/imusitas.jpg" alt="">
-              </a>
-            </div>
-          <div class="col-lg-3">
-            <a href="https://www.instagram.com/ayudandoamilpatitasrosario/">
-            <img class="card-img rounded-circle logo_protectora img-fluid" src="img/logos-protectoras/milpatitas.png" alt="">
-            </a>
           </div>
-            </div>
-          </div>
-      </div>
     </div>
+  </div>
   <!-- footer -->
   <footer class="container-fluid"> 
     <div class="row row_footer">
         <div class="col-lg-12 col-12 d-flex justify-content-center">
-        <a class="logo" href="index.html"><img alt="logo" src="img/logosin.png" height="90" width="90"></a>     
+        <a class="logo" href="index.html"><img alt="logo galgos libres" src="imagenes/logo.png" height="90" width="90"></a>     
         </div>
     </div>        
     <div class="row row_footer">
         <div class="col-lg-12 nav_footer d-flex justify-content-center">
             <a class="font-weight-bold text-decoration-none" href="index.html">Inicio</a>
-            <a class="font-weight-bold text-decoration-none" href="páginas/colaborar.html">Colaborar</a>
-            <a class="font-weight-bold text-decoration-none" href="páginas/contacto.html">Contacto</a>
+            <a class="font-weight-bold text-decoration-none" href="pages/colaborar.html">Colaborar</a>
+            <a class="font-weight-bold text-decoration-none" href="pages/contacto.html">Contacto</a>
         </div>
     </div>    
     <div class="row row_footer">    
         <div class="col-lg-12 d-flex justify-content-center footer_redes">
-            <a class="redes_insta area_circulo" href="https://www.instagram.com/galgoslibres.rosario/?hl=es-la"><i class="fab fa-instagram icon"></i></a>             
-            <a class="redes_fb area_circulo" href="https://www.facebook.com/galgoslibresrosario/"><i class="fab fa-facebook icon"></i></a>
+            <a class="area_circulo" href="https://www.instagram.com/galgoslibres.rosario/?hl=es-la"><i class="fab fa-instagram icon"></i></a>             
+            <a class="area_circulo" href="https://www.facebook.com/galgoslibresrosario/"><i class="fab fa-facebook icon"></i></a>
         </div>
     </div>     
     <div class="row row_footer">
@@ -192,8 +197,11 @@
         </div>    
     </div>    
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script>$(document).ready(function(){$("a[title|='Hosted on free web hosting 000webhost.com. Host your own website for FREE.']").css("display", "none");$("img[alt|='www.000webhost.com']").css("display", "none");});</script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
