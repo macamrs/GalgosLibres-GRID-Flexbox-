@@ -13,6 +13,7 @@
     --negro: #000;
     --títulos:'Montserrat', sans-serif; 
     --párrafos:'Open Sans', sans-serif;
+    --babyblue: #d4e8ed; 
 }
 
 h1 , h2 , h3 , h4 { font-family: var(--títulos);}
